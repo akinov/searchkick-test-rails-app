@@ -80,7 +80,4 @@ test:
 # for a full overview on how database connection configuration can be specified.
 #
 production:
-  <<: *default
-  database: searchkick_test_rails_app_production
-  username: searchkick_test_rails_app
-  password: <%= ENV['SEARCHKICK_TEST_RAILS_APP_DATABASE_PASSWORD'] %>
+  url:  <%= ENV['DATABASE_URL'] %>
